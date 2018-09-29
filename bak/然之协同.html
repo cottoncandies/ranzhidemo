@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="screen-desktop-wide device-desktop"><head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="http://demo.ranzhi.org/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://demo.ranzhi.org/favicon.ico" type="image/x-icon">
+    <title>然之协同</title>
+<script language="Javascript">var config={"webRoot":"\/","appName":"sys","cookieLife":30,"requestType":"GET","requestFix":"-","moduleVar":"m","methodVar":"f","viewVar":"t","defaultView":"html","themeRoot":"\/theme\/","currentModule":"index","currentMethod":"index","clientLang":"zh-cn","requiredFields":"","save":"\u4fdd\u5b58","router":"\/sys\/index.php","runMode":"front","timeout":30000,"pingInterval":60}
+</script>
+<script language="Javascript">if(typeof(v) != "object") v = {};v.entryID = "superadmin";</script>
+<link rel="stylesheet" href="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/all.css" type="text/css" media="screen">
+<link rel="stylesheet" href="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/all.css" type="text/css" media="print">
+<link rel="stylesheet" href="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/ips.css" type="text/css" media="screen">
+<link rel="stylesheet" href="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/ips.css" type="text/css" media="print">
+<script src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/all.js" type="text/javascript"></script>
+<style>.categoryButton, .categoryMenu li button {height: 40px; width: 40px; padding: 6px; text-align: center;}
+.categoryButton .icon, .categoryMenu li .app-btn .icon{
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 28px;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 28px;
+}
+
+.categoryMenu{opacity: 1; left: 39px; padding: 0px 5px 0px 5px;}
+.categoryMenu li {float: left;}
+.categoryButton.active, .categoryMenu li button.active{background-color: rgba(255, 255, 255, 0.2);color: rgba(255, 255, 255, 0.85);}
+</style><!--[if lt IE 9]>
+<script src='/js/html5shiv/min.js?v=4.8' type='text/javascript'></script>
+<script src='/js/respond/min.js?v=4.8' type='text/javascript'></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script src='/js/jquery/placeholder/min.js?v=4.8' type='text/javascript'></script>
+<![endif]-->
+<script language="Javascript">v.lang = {"confirmDelete":"\u60a8\u786e\u5b9a\u8981\u6267\u884c\u5220\u9664\u64cd\u4f5c\u5417\uff1f","confirmFinish":"\u60a8\u786e\u5b9a\u8981\u6267\u884c\u5b8c\u6210\u64cd\u4f5c\u5417\uff1f","deleteing":"\u5220\u9664\u4e2d","doing":"\u5904\u7406\u4e2d","timeout":"\u7f51\u7edc\u8d85\u65f6,\u8bf7\u91cd\u8bd5","confirmDiscardChanges":"\u8868\u5355\u5df2\u66f4\u6539\uff0c\u786e\u5b9a\u5173\u95ed\uff1f","yes":"\u662f","no":"\u5426"};</script>
+</head>
+<body class="m-index-index">
+<script src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/ips.js" type="text/javascript"></script>
+<script language="Javascript">v.attend = 1;</script>
+<!-- Desktop -->
+<div id="desktop" class="fullscreen-mode">
+  <div id="leftBar" class="dock-left unselectable">
+    <button id="start" class="dock-bottom" type="button" title="demo">
+      <div class="avatar avatar-md"></div>
+    </button>
+    <ul id="startMenu" class="dropdown-menu fade">
+      <li class="with-avatar"><a href="http://demo.ranzhi.org/sys/index.php?m=user&amp;f=profile" data-toggle="modal" data-id="profile"><div class="avatar avatar-md"></div><strong>demo</strong></a>
+</li>
+      <li class="divider"></li>
+      <li class="dropdown-submenu"><a href="###" data-toggle="dropdown" class="dropdown-toggle"><i class="icon icon-globe"></i> 简体</a>
+<ul class="dropdown-menu">
+  <li><a href='javascript:selectLang("zh-tw")'>繁體</a></li><li><a href='javascript:selectLang("en")'>English</a></li></ul>
+</li>
+      <li class="dropdown-submenu"><a href="###" data-toggle="dropdown" class="dropdown-toggle"><i class="icon icon-adjust"></i> 主题</a>
+<ul class="dropdown-menu">
+  <li class="theme-option active"><a href='javascript:selectTheme("default");' data-value="default">默认</a></li><li class="theme-option"><a href='javascript:selectTheme("clear");' data-value="clear">清晰</a></li></ul>
+</li>
+      <li><a href="http://demo.ranzhi.org/sys/index.php?m=misc&amp;f=about" data-id="about" data-toggle="modal" data-width="500"><i class="icon icon-info-sign"></i> 关于</a></li>
+      <li class="divider"></li>
+            <li><a href="http://demo.ranzhi.org/sys/index.php?m=entry&amp;f=create" data-id="superadmin" class="app-btn"><i class="icon icon-plus"></i> 添加应用</a>
+</li>
+            <li><a href="javascript:;" class="fullscreen-btn" data-id="allapps"><i class="icon icon-th-large"></i> 所有应用</a></li>
+      <li class="divider"></li>
+      <li><a href="http://demo.ranzhi.org/sys/index.php?m=user&amp;f=logout"><i class="icon icon-signout"></i> 退出</a>
+</li>
+    </ul>
+    <div id="apps-menu">
+      <ul class="bar-menu"><li id="s-menu-dashboard" data-order="0"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="我的地盘" data-id="dashboard"><i class="icon icon-home"></i></button></li><li id="s-menu-1" data-order="1"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="" data-id="1" data-original-title="客户管理"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-crm.png" alt=""></button></li><li id="s-menu-8" data-order="2"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="项目" data-id="8"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-proj.png" alt=""></button></li><li id="s-menu-4" data-order="3"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="团队" data-id="4"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-team.png" alt=""></button></li><li id="s-menu-9" data-order="4"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="文档" data-id="9"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-doc.png" alt=""></button></li><li id="s-menu-3" data-order="5"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="日常办公" data-id="3"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-oa.png" alt=""></button></li><li id="s-menu-2" data-order="6"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="现金记账" data-id="2"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-cash.png" alt=""></button></li><li id="s-menu-superadmin" data-order="7"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="后台管理" data-id="superadmin"><i class="icon icon-cog"></i></button></li><li id="s-menu-allapps" data-order="8"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="所有应用" data-id="allapps"><i class="icon icon-th-large"></i></button></li></ul>
+      <button id="moreOptionBtn" data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="btn-more" data-original-title="..."><i class="icon icon-ellipsis-h"></i></button>
+      <ul id="moreOptionMenu" class="bar-menu dropdown-menu fade"><li id="s-menu-dashboard" data-order="0"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="我的地盘" data-id="dashboard"><i class="icon icon-home"></i></button></li><li id="s-menu-1" data-order="1"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="客户管理" data-id="1"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-crm.png" alt=""></button></li><li id="s-menu-8" data-order="2"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="项目" data-id="8"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-proj.png" alt=""></button></li><li id="s-menu-4" data-order="3"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="团队" data-id="4"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-team.png" alt=""></button></li><li id="s-menu-9" data-order="4"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="文档" data-id="9"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-doc.png" alt=""></button></li><li id="s-menu-3" data-order="5"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="日常办公" data-id="3"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-oa.png" alt=""></button></li><li id="s-menu-2" data-order="6"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="现金记账" data-id="2"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-cash.png" alt=""></button></li><li id="s-menu-superadmin" data-order="7"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="后台管理" data-id="superadmin"><i class="icon icon-cog"></i></button></li><li id="s-menu-allapps" data-order="8"><button data-toggle="tooltip" data-tip-class="s-menu-tooltip" data-placement="right" data-btn-type="menu" class="app-btn s-menu-btn" title="所有应用" data-id="allapps"><i class="icon icon-th-large"></i></button></li></ul>
+    </div>
+  </div>
+  <div id="bottomBar" class="dock-bottom unselectable">
+    <div id="taskbar"><ul class="bar-menu"></ul></div>
+    <div id="bottomRightBar" class="dock-right">
+      <ul class="bar-menu">
+        <li><a href="javascript:void(0)" class="sign signout">签退</a>
+</li>        <li><button id="showDesk" type="button" class="fullscreen-btn icon-desktop" data-id="home" data-toggle="tooltip" title="桌面"></button></li>
+      </ul>
+      <div class="copyright"><a href="http://www.ranzhi.org/?v=4.8" target="_blank">然之协同 4.8</a></div>
+    </div>
+  </div>
+  <div id="home" class="fullscreen fullscreen-active unselectable" style="width: 1880px; left: 40px; top: 0px; bottom: 36px;">
+    <nav class="navbar navbar-main navbar-fixed-top" id="mainNavbar">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="http://demo.ranzhi.org/sys/index.php?m=user&amp;f=profile" data-toggle="modal" data-id="profile"><i class="icon-user"></i> demo</a>
+</li>
+        </ul>
+        <ul class="nav navbar-nav">
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=calendar">待办</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=task">任务</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=project">项目</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=order">订单</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=contract">合同</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=review">审批</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=company">组织</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=dynamic">动态</a></li>
+<li><a class="app-btn open" data-id="dashboard" href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=contact">联系人</a></li>
+</ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-brand" href=""></a></li>
+          <li><a href="javascript:;" class="refresh-all-panel"><i class="icon-repeat"></i></a></li>
+          <li><a data-toggle="modal" href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin" title="添加区块"><i class="icon-plus"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="dashboardWrapper">
+      <div class="panels-container dashboard dashboard-draggable" id="dashboard" data-confirm-remove-block="确定移除区块【{0}】吗？">
+        <div class="row">
+                                        <div class="col-xs-6 pull-left">
+          <div class="panel panel-default" id="block1" data-id="1" data-blockid="71" data-name="任务列表" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=1" style="height: 240px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=task&amp;type=assignedTo" class="more app-btn" data-id="dashboard">更多<i class="icon-double-angle-right"></i></a>
+                  <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=1" data-toggle="modal" class="edit-block" data-title="任务列表" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                任务列表              </div>
+              <div class="panel-body no-padding"><table class="table table-fixed table-hover table-condensed block-task">
+  </table>
+<script>$('.block-task').dataTable();</script>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                              <div class="col-xs-4 pull-left">
+          <div class="panel" id="block2" data-id="2" data-blockid="14" data-name="系统公告" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=2" style="height: 240px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a href="http://demo.ranzhi.org/oa/index.php?m=announce&amp;f=browse" class="more app-btn" data-id="oa">更多<i class="icon-double-angle-right"></i></a>
+                  <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=2" data-toggle="modal" class="edit-block" data-title="系统公告" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                系统公告              </div>
+              <div class="panel-body no-padding"><table class="table table-data table-hover table-fixed" id="oaBlockAnnounce">
+    <tbody><tr>
+    <td><a href="http://demo.ranzhi.org/oa/index.php?m=announce&amp;f=view&amp;announceID=5" data-toggle="modal">然之demo站点部署完成</a>
+</td>
+    <td class="w-50px">08-25</td>
+  </tr>
+  </tbody></table>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                              <div class="col-xs-4 pull-left">
+          <div class="panel" id="block3" data-id="3" data-blockid="6" data-name="最新帖子" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=3" data-height="236" style="height: 236px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a href="http://demo.ranzhi.org/team/index.php?m=forum&amp;f=index" class="more app-btn" data-id="team">更多<i class="icon-double-angle-right"></i></a>
+                  <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=3" data-toggle="modal" class="edit-block" data-title="最新帖子" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                最新帖子              </div>
+              <div class="panel-body no-padding"><table class="table table-data table-hover table-fixed block-thread">
+      <tbody><tr data-url="/team/index.php?m=thread&amp;f=view&amp;id=3" class="app-btn" data-id="4">
+    <td>担起一份社会责任，绿色办公，从你我做起</td>
+    <td class="w-80px">demo</td>
+    <td class="w-50px">08-25</td>
+  </tr>  
+      <tr data-url="/team/index.php?m=thread&amp;f=view&amp;id=2" class="app-btn" data-id="4">
+    <td> 7种食物 提高免疫力级别</td>
+    <td class="w-80px">demo</td>
+    <td class="w-50px">08-25</td>
+  </tr>  
+      <tr data-url="/team/index.php?m=thread&amp;f=view&amp;id=1" class="app-btn" data-id="4">
+    <td> 神奇西红柿治疗10种疾病</td>
+    <td class="w-80px">demo</td>
+    <td class="w-50px">08-25</td>
+  </tr>  
+  </tbody></table>
+<script>$('.block-thread').dataTable();</script>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                              <div class="col-xs-3 pull-left">
+          <div class="panel" id="block4" data-id="4" data-blockid="24" data-name="合同列表" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=4" style="height: 236px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a href="http://demo.ranzhi.org/crm/index.php?m=contract&amp;f=browse&amp;mode=finished" class="more app-btn" data-id="crm">更多<i class="icon-double-angle-right"></i></a>
+                  <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=4" data-toggle="modal" class="edit-block" data-title="合同列表" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                合同列表              </div>
+              <div class="panel-body no-padding"><table class="table table-data table-hover block-contract table-fixed">
+      <tbody><tr data-url="/crm/index.php?m=contract&amp;f=view&amp;id=9" class="app-btn" data-id="1">
+    <td class="nobr"> 上海WW电子科技有限公司购买蝉知授权</td>
+    <td class="w-80px text-center text-danger">20000.00</td>
+    <td class="w-120px">交付完成 回款完成</td>
+  </tr>
+  </tbody></table>
+<script>if(!$.ipsStart) $('.block-contract').dataTable();</script>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                              <div class="col-xs-4 pull-left">
+          <div class="panel panel-success" id="block5" data-id="5" data-blockid="62" data-name="付款帐号" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=5" style="height: 236px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a href="http://demo.ranzhi.org/cash/index.php?m=depositor&amp;f=index" class="more app-btn" data-id="cash">更多<i class="icon-double-angle-right"></i></a>
+                  <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=5" data-toggle="modal" class="edit-block" data-title="付款帐号" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                付款帐号              </div>
+              <div class="panel-body no-padding"><div class="list items">
+      <div class="item">
+     <strong class="item-heading">青岛息壤网络信息有限公司</strong>
+     <div class="item-content"> 
+       <span>7371210182800133586</span>
+       <span>中信银行青岛经济技术开发区支行</span>
+     </div>
+  </div>
+      <div class="item">
+     <strong class="item-heading">青岛息壤网络信息有限公司</strong>
+     <div class="item-content"> 
+       <span>pay@xirangit.com</span>
+       <span>支付宝</span>
+     </div>
+  </div>
+      <div class="item">
+     <strong class="item-heading">王春生</strong>
+     <div class="item-content"> 
+       <span>4682035829246688</span>
+       <span>招商银行青岛分行开发区支行</span>
+     </div>
+  </div>
+  </div>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                              <div class="col-xs-5 pull-left">
+          <div class="panel panel-default" id="block6" data-id="6" data-blockid="60" data-name="最新动态" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=6" style="height: 240px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                                    <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=6" data-toggle="modal" class="edit-block" data-title="最新动态" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                最新动态              </div>
+              <div class="panel-body no-padding"><table class="table table-condensed table-hover table-striped table-borderless table-fixed">
+  <tbody><tr><td class="nobr" width="100%">9月18日 17:52, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:52, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:48, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:48, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:48, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:47, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:47, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:47, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:47, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:46, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:46, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:43, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:40, 风言 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:40, 风言 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:39, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:35, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:32, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:31, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:28, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:28, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:27, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:26, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:26, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:24, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:21, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:21, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:20, 风言 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:20, 风言 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:19, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:17, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:16, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:15, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:15, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:11, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:11, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:07, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:07, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:03, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:01, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 17:01, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:57, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:57, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:56, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:56, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:56, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:56, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:56, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:55, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:55, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:55, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:54, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:54, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:54, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:53, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:53, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:52, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:52, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:52, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:52, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:51, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:51, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:51, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:51, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:50, demo <em>编辑了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=4" data-toggle="modal">任务:</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:49, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:48, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:48, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:47, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:46, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:46, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:46, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:44, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:44, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:41, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:41, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:41, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:41, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:40, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:40, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:40, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:37, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:37, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:36, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:35, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:35, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:33, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:32, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:32, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:32, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:30, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:30, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:30, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:27, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:26, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:25, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:24, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:24, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:23, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:23, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:23, demo <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:21, demo <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:20, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:20, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:19, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:17, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:17, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:15, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:12, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:12, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:11, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:11, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:11, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:10, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:09, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:09, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:08, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:08, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:07, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:06, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:06, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:05, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:05, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:03, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:03, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 16:03, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:59, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:59, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:58, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:58, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:58, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:57, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:57, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:57, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:56, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:55, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:55, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:55, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:55, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:54, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:54, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:53, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:52, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:52, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:52, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:52, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:52, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:52, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:50, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:50, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:50, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:50, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:50, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:50, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:49, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:48, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:48, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:48, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:46, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:46, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:46, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:43, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:43, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:43, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:43, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:43, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:42, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:42, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:42, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:42, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, guest <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 王旺旺 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 王旺旺 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:41, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:40, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:39, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:39, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:39, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:38, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:38, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:37, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:37, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:37, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:37, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:34, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:34, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:31, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:31, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:29, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:28, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:28, 包宝宝 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:26, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:23, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:23, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:23, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:23, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:21, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:20, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:20, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:20, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:20, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, 郑珍珍 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:19, 风言 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:18, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:18, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:18, 郑珍珍 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:18, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:18, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:18, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:17, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:16, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:15, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:15, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:12, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:11, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:11, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:11, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:10, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:10, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:10, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:09, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:09, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr class="app-btn" data-id="cash" data-url="/cash/index.php?m=trade&amp;f=browse"><td class="nobr" width="100%">9月18日 15:09, 雷磊磊 <em>回款</em> 账目 <a href="http://demo.ranzhi.org/cash/index.php?m=trade&amp;f=browse">收入￥22.00</a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=contract&amp;f=view&amp;contractID=10"><td class="nobr" width="100%">9月18日 15:09, 雷磊磊 <em>回款</em> 合同 <a href="http://demo.ranzhi.org/crm/index.php?m=contract&amp;f=view&amp;contractID=10">深圳计算机通信科技有限公司购买无忧在线托管 (2018-09-18)</a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=customer&amp;f=view&amp;customerID=11"><td class="nobr" width="100%">9月18日 15:09, 雷磊磊 <em>回款</em> 客户 <a href="http://demo.ranzhi.org/crm/index.php?m=customer&amp;f=view&amp;customerID=11">深圳计算机通信科技有限公司</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:08, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:08, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=contract&amp;f=view&amp;contractID=10"><td class="nobr" width="100%">9月18日 15:08, demo <em>沟通了</em> 合同 <a href="http://demo.ranzhi.org/crm/index.php?m=contract&amp;f=view&amp;contractID=10">深圳计算机通信科技有限公司购买无忧在线托管 (2018-09-18)</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:07, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:06, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:06, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:06, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:06, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:06, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:06, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:05, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:05, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:05, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:05, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:05, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:04, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:04, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:03, 包宝宝 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:03, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:03, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:03, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:03, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:03, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:02, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 15:00, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:59, guest <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:59, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:58, demo <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:57, demo <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:56, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:56, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:56, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:54, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:54, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:54, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:54, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:52, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:52, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:51, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:49, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:49, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:46, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:46, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:44, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:43, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:42, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:42, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:40, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:38, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:37, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:37, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:37, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:37, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:37, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:36, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:36, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:36, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:35, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr class="app-btn" data-id="doc" data-url="/doc/index.php?m=doc&amp;f=browse&amp;doclibID=8"><td class="nobr" width="100%">9月18日 14:35, demo <em>创建了</em> 文档库 <a href="http://demo.ranzhi.org/doc/index.php?m=doc&amp;f=browse&amp;doclibID=8">1213</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:35, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:35, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:35, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:35, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:34, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:34, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:34, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:34, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:34, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:34, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:33, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:33, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:33, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:33, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:32, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:32, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:32, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:31, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:31, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:31, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:28, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:28, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:28, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:28, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:28, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:27, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:27, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:27, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:26, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:26, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:24, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:24, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:24, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:24, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:22, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:22, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:22, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:20, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:19, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:19, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:19, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:19, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:18, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:18, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:18, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:18, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:16, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:16, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:16, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:16, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:16, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, demo <em>指派了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=5" data-toggle="modal">客户:</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, demo <em>创建了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=4" data-toggle="modal">任务:</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, demo <em>指派了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=4" data-toggle="modal">任务:</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, demo <em>创建了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=5" data-toggle="modal">客户:</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:15, demo <em>指派了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=5" data-toggle="modal">客户:</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:14, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:13, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:13, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:13, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:11, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:10, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:09, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:09, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:09, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:08, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:08, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:08, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:07, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:07, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:06, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:06, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:04, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:04, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:03, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:03, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:00, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 14:00, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:59, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:58, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:57, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:56, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:54, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:54, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:50, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:50, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:46, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:46, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:46, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:43, demo <em>完成了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=1" data-toggle="modal">test1</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:43, demo <em>指派了</em> 待办 <a href="http://demo.ranzhi.org/sys/index.php?m=todo&amp;f=view&amp;todoID=1" data-toggle="modal">test1</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:42, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:42, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:41, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:41, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:38, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:38, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:37, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:34, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:34, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:33, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:30, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:30, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:26, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:26, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:21, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:21, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:21, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:17, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:17, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:13, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:12, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:08, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:08, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:08, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:04, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:04, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:04, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:00, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 13:00, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:58, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:58, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:56, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:55, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:55, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:55, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:53, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:53, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:49, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:49, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:46, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:45, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:45, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:45, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:41, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:41, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:36, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:35, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:35, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:35, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:30, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:30, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:26, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:26, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:25, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:21, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:21, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:21, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:17, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:17, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:13, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:13, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:09, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:09, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:05, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:05, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:01, demo <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:00, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:00, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 12:00, demo <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:59, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:58, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:58, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:55, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:55, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:53, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:53, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:51, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:51, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:51, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:49, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:49, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:48, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:47, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:47, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:46, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:45, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:44, demo <em>创建了</em> 项目 <a href="http://demo.ranzhi.org/proj/index.php?m=task&amp;f=browse&amp;projectID=2" data-toggle="modal">test</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:44, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:43, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:43, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:43, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:43, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:42, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:41, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:41, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:40, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:40, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:40, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:38, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:38, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:38, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:35, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:35, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=order&amp;f=view&amp;orderID=11"><td class="nobr" width="100%">9月18日 11:35, demo <em>签约了</em> 订单 <a href="http://demo.ranzhi.org/crm/index.php?m=order&amp;f=view&amp;orderID=11">深圳计算机通信科技有限公司购买无忧在线托管 (2018-09-18)</a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=contract&amp;f=view&amp;contractID=10"><td class="nobr" width="100%">9月18日 11:35, demo <em>创建了</em> 合同 <a href="http://demo.ranzhi.org/crm/index.php?m=contract&amp;f=view&amp;contractID=10">深圳计算机通信科技有限公司购买无忧在线托管 (2018-09-18)</a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=customer&amp;f=view&amp;customerID=11"><td class="nobr" width="100%">9月18日 11:35, demo <em>创建合同</em> 客户 <a href="http://demo.ranzhi.org/crm/index.php?m=customer&amp;f=view&amp;customerID=11">深圳计算机通信科技有限公司</a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=order&amp;f=view&amp;orderID=11"><td class="nobr" width="100%">9月18日 11:35, demo <em>沟通了</em> 订单 <a href="http://demo.ranzhi.org/crm/index.php?m=order&amp;f=view&amp;orderID=11">深圳计算机通信科技有限公司购买无忧在线托管 (2018-09-18)</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:34, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:33, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:33, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:32, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:32, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:32, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:31, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:31, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:31, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:28, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:28, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:28, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:28, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:27, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:27, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=order&amp;f=view&amp;orderID=11"><td class="nobr" width="100%">9月18日 11:27, demo <em>创建了</em> 订单 <a href="http://demo.ranzhi.org/crm/index.php?m=order&amp;f=view&amp;orderID=11">深圳计算机通信科技有限公司购买无忧在线托管 (2018-09-18)</a>。</td></tr><tr class="app-btn" data-id="crm" data-url="/crm/index.php?m=customer&amp;f=view&amp;customerID=11"><td class="nobr" width="100%">9月18日 11:27, demo <em>创建订单</em> 客户 <a href="http://demo.ranzhi.org/crm/index.php?m=customer&amp;f=view&amp;customerID=11">深圳计算机通信科技有限公司</a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:27, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:26, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:26, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:25, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:24, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:24, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:23, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:23, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:23, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:22, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:22, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:22, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:21, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:20, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:20, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:19, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:18, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:18, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:17, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:16, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:16, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:16, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:15, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:10, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:10, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:09, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:09, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:08, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:08, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:07, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:07, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:03, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:03, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:02, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:02, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:02, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:02, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 11:00, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:59, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:59, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:59, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:58, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:57, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:57, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:56, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:56, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:56, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:56, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:55, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:55, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:54, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:54, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:53, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:52, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:52, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:52, guest <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:51, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:51, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:51, 大仙 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:50, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:50, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:49, 大仙 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:49, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:48, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:39, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:32, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:29, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:19, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:10, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:10, 李丽丽 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:08, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:05, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:04, demo <em>退出登录</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:02, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 10:00, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:58, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:57, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:54, 李丽丽 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:44, demo <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:43, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:42, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:42, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:42, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:42, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:41, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:40, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:38, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:38, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:32, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:31, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:30, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:30, demo <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:28, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 09:11, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 08:58, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 08:54, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 08:47, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 08:42, demo <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 07:18, demo <em>登录系统</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 07:13, 德魔1 <em>退出喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 07:13, 德魔1 <em>登录喧喧</em>  <a href=""></a>。</td></tr><tr><td class="nobr" width="100%">9月18日 00:19, demo <em>登录系统</em>  <a href=""></a>。</td></tr></tbody></table>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                              <div class="col-xs-4 pull-left">
+          <div class="panel panel-default" id="block7" data-id="7" data-blockid="66" data-name="任务列表" data-url="/sys/index.php?m=entry&amp;f=printBlock&amp;index=7" style="height: 240px;">
+              <div class="panel-heading">
+                <div class="panel-actions">
+                  <a href="http://demo.ranzhi.org/sys/index.php?m=my&amp;f=task&amp;type=assignedTo" class="more app-btn" data-id="dashboard">更多<i class="icon-double-angle-right"></i></a>
+                  <button class="btn btn-mini refresh-panel" type="button"><i class="icon-repeat"></i></button>
+                  <div class="dropdown">
+                    <button role="button" class="btn btn-mini" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="http://demo.ranzhi.org/sys/index.php?m=block&amp;f=admin&amp;index=7" data-toggle="modal" class="edit-block" data-title="任务列表" data-icon="icon-pencil"><i class="icon-pencil"></i> 编辑</a></li>
+                      <li><a href="javascript:;" class="remove-panel"><i class="icon-remove"></i> 删除</a></li>
+                                          </ul>
+                  </div>
+                </div>
+                任务列表              </div>
+              <div class="panel-body no-padding"><table class="table table-fixed table-hover table-condensed block-task">
+  </table>
+<script>$('.block-task').dataTable();</script>
+</div>
+            </div>
+          <div class="resize-handle resize-horizontal"><i class="icon icon-resize-h"></i></div><div class="resize-handle resize-vertical"><i class="icon icon-resize-v"></i></div></div>
+                  </div>
+      </div>
+    </div>
+  </div>
+  <div id="allapps" class="fullscreen unselectable" style="width: 1880px; left: 40px; top: 0px; bottom: 36px;">
+    <header>
+      <ul class="nav" id="appSearchNav">
+        <li><a href="javascript:;" class="app-search" data-key=""><i class="icon-th-large"></i> <span>所有应用</span> &nbsp;<small class="muted entries-count">9</small></a></li>
+        <li><a href="javascript:;" class="app-search" data-key=":menu"><i class=""></i> <span>左侧显示</span> &nbsp;<small class="muted search-count"></small></a></li>
+        <li><a href="javascript:;" class="app-search" data-key=":!menu"><i class=""></i> <span>非左侧显示</span> &nbsp;<small class="muted search-count"></small></a></li>
+      </ul>
+      <div class="search-input">
+        <i class="icon-search icon"></i>
+        <input id="search" class="form-control-pure form-control" type="text">
+        <button id="cancelSearch" class="btn btn-pure btn-mini" type="button"><i class="icon-remove"></i></button>
+      </div>
+      <div class="actions">
+                <a href="http://demo.ranzhi.org/sys/index.php?m=entry&amp;f=create" data-id="superadmin" class="app-btn btn btn-pure"><i class="icon-plus"></i> 添加应用</a>
+              </div>
+    </header>
+    <div class="all-apps-list" id="allAppsList">
+      <ul class="bar-menu"><li id="s-applist-dashboard"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="dashboard" data-code="dashboard"><i class="icon icon-home"></i>我的地盘</a></li><li id="s-applist-1"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="1" data-code="crm"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-crm.png" alt="">客户管理</a></li><li id="s-applist-8"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="8" data-code="proj"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-proj.png" alt="">项目</a></li><li id="s-applist-4"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="4" data-code="team"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-team.png" alt="">团队</a></li><li id="s-applist-9"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="9" data-code="doc"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-doc.png" alt="">文档</a></li><li id="s-applist-3"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="3" data-code="oa"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-oa.png" alt="">日常办公</a></li><li id="s-applist-2"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="2" data-code="cash"><img src="%E7%84%B6%E4%B9%8B%E5%8D%8F%E5%90%8C_files/app-cash.png" alt="">现金记账</a></li><li id="s-applist-6"><a href="javascript:;" class="app-btn menu-false s-list-btn" data-menu="false" data-btn-type="list" data-id="6" data-code="webapp1"><i class="icon icon-default" style="background-color: hsl(282, 100%, 40%)"><span>R</span><span class="text-extra">U</span></i>RunJS</a></li><li id="s-applist-superadmin"><a href="javascript:;" class="app-btn menu-true s-list-btn" data-menu="true" data-btn-type="list" data-id="superadmin" data-code="superadmin"><i class="icon icon-cog"></i>后台管理</a></li></ul>
+    </div>
+  </div>
+  <div id="deskContainer"></div>
+  <div id="modalContainer"></div>
+</div>
+<div id="noticeBox">
+  <div id="noticeorder1" data-id="order1" class="alert alert-success with-icon alert-dismissable" style="width:380px; position:fixed; bottom:25px; right:15px; z-index: 9999;"><i class="icon icon-envelope-alt"></i><div class="content"><p><strong>沟通订单 <a href="http://demo.ranzhi.org/crm/index.php?m=order&amp;f=view&amp;orderID=1" data-appid="crm">华东电能购买禅道专业版终身版 (2014-08-25)</a></strong></p></div><button type="button" class="close" data-dismiss="alert" aria-hidden="true" data-read="/sys/index.php?m=action&amp;f=read&amp;actionID=order1&amp;type=order">×</button></div></div>
+<div id="categoryTpl" class="hide">
+  <ul id="categoryMenucategoryid" class="category categoryMenu dropdown-menu fade" data-id="categoryid" style="display: none;"></ul>
+</div>
+<script>
+var entries = [
+{
+    id        : 'dashboard',
+    code      : 'dashboard',
+    name      : '我的地盘',
+    abbr      : '我的',
+    open      : 'iframe',
+    desc      : '我的地盘',
+    menu      : 'all',
+    sys       : true,
+    icon      : 'icon-home',
+    url       : '/sys/index.php?m=todo&f=calendar',
+    order     : 0, 
+},
+{
+    id        : 'allapps',
+    code      : 'allapps',
+    name      : '所有应用',
+    display   : 'fullscreen',
+    desc      : '所有应用',
+    menu      : 'menu',
+    icon      : 'icon-th-large',
+    sys       : true,
+    forceMenu : true,
+    order     : 9999999
+},
+{
+    id        : 'home',
+    code      : 'home',
+    name      : '',
+    display   : 'fullscreen',
+    menu      : 'none',
+    icon      : 'icon-desktop',
+    sys       : true,
+    forceMenu : true,
+    order     : 9999998
+}];
+
+
+entries.push(
+{
+    id    : 'superadmin',
+    code  : 'superadmin',
+    name  : '后台管理',
+    open  : 'iframe',
+    desc  : '后台管理',
+    menu  : 'all',
+    sys   : true,
+    icon  : 'icon-cog',
+    url   : "/sys/index.php?m=admin&f=index",
+    order : 9999997
+});
+
+var ipsLang = {};
+ipsLang["confirmClose"] = "确认要关闭　【{0}】 吗？";ipsLang["entryNotFindTip"] = "应用没有找到！";ipsLang["busyTip"] = "应用正忙，请稍候...";ipsLang["reloadText"] = "刷新";ipsLang["closeText"] = "关闭";ipsLang["openText"] = "打开";ipsLang["removeText"] = "移除";ipsLang["fixToMenuText"] = "左侧显示";ipsLang["removeFromMenuText"] = "左侧移除";ipsLang["deleteEntryText"] = "删除应用";ipsLang["removedEntry"] = "应用【{0}】已删除";ipsLang["confirmRemoveEntry"] = "确定移除应用【{0}】吗？";ipsLang["showWindowText"] = "显示";ipsLang["confirmRemoveBlock"] = "确定要删除区块 【{0}】 吗？";ipsLang["removedBlock"] = "区块已删除";ipsLang["hiddenBlock"] = "区块已隐藏";ipsLang["orderdBlocksSaved"] = "排序已保存";ipsLang["moreOptionTip"] = "显示另外 {0} 个应用";ipsLang["confirmCloseBrowser"] = "提示：当前有打开的应用窗口";
+entries.push(
+            {
+                id:       '1',
+                code:     'crm',
+                name:     '客户管理',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=1',
+                open:     'iframe', 
+                desc:     '客户管理',
+                size:      'max',
+                icon:     '/theme/default/images/ips/app-crm.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '客户',
+                order:    '20',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '8',
+                code:     'proj',
+                name:     '项目',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=8',
+                open:     'iframe', 
+                desc:     '项目',
+                size:      'max',
+                icon:     '/theme/default/images/ips/app-proj.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '项目',
+                order:    '30',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '4',
+                code:     'team',
+                name:     '团队',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=4',
+                open:     'iframe', 
+                desc:     '团队',
+                size:      'max',
+                icon:     '/theme/default/images/ips/app-team.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '团队',
+                order:    '40',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '9',
+                code:     'doc',
+                name:     '文档',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=9',
+                open:     'iframe', 
+                desc:     '文档',
+                size:      'max',
+                icon:     '/theme/default/images/ips/app-doc.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '文档',
+                order:    '50',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '3',
+                code:     'oa',
+                name:     '日常办公',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=3',
+                open:     'iframe', 
+                desc:     '日常办公',
+                size:      'max',
+                icon:     '/theme/default/images/ips/app-oa.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '办公',
+                order:    '60',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '2',
+                code:     'cash',
+                name:     '现金记账',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=2',
+                open:     'iframe', 
+                desc:     '现金记账',
+                size:      'max',
+                icon:     '/theme/default/images/ips/app-cash.png',
+                control:  'simple',
+                position: 'default',
+                menu:     'all',
+                display:  'fixed',
+                abbr:     '记账',
+                order:    '70',
+                sys:      '1',
+                category: '0'
+            });
+entries.push(
+            {
+                id:       '6',
+                code:     'webapp1',
+                name:     'RunJS',
+                url:      '/sys/index.php?m=entry&f=visit&entryID=6',
+                open:     'blank', 
+                desc:     'RunJS',
+                size:      {"width":1024,"height":600},
+                icon:     '',
+                control:  'full',
+                position: 'center',
+                menu:     'list',
+                display:  'sizeable',
+                abbr:     '',
+                order:    '100',
+                sys:      '0',
+                category: '0'
+            });
+</script>
+<script language="Javascript">$(function()
+{
+    /* start ips */
+    $.ipsStart(entries, $.extend({onBlocksOrdered: sortBlocks, onDeleteBlock: deleteBlock, onDeleteEntry: deleteEntry, onUpdateEntryMenu: updateEntryMenu, onSortEntries: sortEntries, onResize: resizeBlock}, config, ipsLang));
+    if(v.attend)
+    {
+        initAttendButton();
+        $('.sign').parent('li').show();
+    }
+    else
+    {
+        $('.sign').parent('li').hide();
+    }
+
+    $(document).on('mouseover', '.categoryButton', function()
+    {
+        $('.categoryButton').not('.open').removeClass('active');
+        $(this).addClass('active');
+        var id    = $(this).data('id');
+        var menu  = $('#categoryMenu' + id);
+        var lis   = menu.find('li');
+        var color = $('body').css('background-color');
+        menu.css({'background-color' : color, 'top' : $(this).offset().top - 3, 'width' : 40 * lis.size() + 20});
+        $('.categoryMenu').not(menu).hide();
+        menu.show();
+    });
+
+    $(document).on('mouseover', '.categoryMenu li .app-btn', function()
+    {
+        $('.categoryMenu li .app-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $(document).on('mouseout', '.categoryMenu li .app-btn', function()
+    {
+        $('.categoryMenu li .app-btn').removeClass('active');
+        var id = $(this).parents('.categoryMenu').data('id');
+        if(!$('#category' + id).hasClass('open')) $('#category' + id).removeClass('active');
+    });
+
+    $(document).on('click', '.categoryMenu li .app-btn', function()
+    {
+        $('.categoryMenu').hide();
+        $('.categoryButton').removeClass('active');
+
+        var id = $(this).parents('.categoryMenu').data('id');
+        $('#category' + id).addClass('open active');
+    });
+
+    $(document).on('mouseover', '#leftBar #apps-menu .bar-menu li .app-btn', function()
+    {
+        $('.categoryButton').not(this).not('.open').removeClass('active');
+        if(!$(this).hasClass('categoryButton')) $('.categoryMenu').hide();
+    });
+
+    $(document).on('click', '#leftBar #apps-menu .bar-menu li .app-btn', function()
+    {
+        $('.categoryButton').removeClass('active');
+        $('.categoryMenu').hide();
+    });
+
+    $(document).on('click', '#bottomBar #taskbar .bar-menu li .app-btn', function()
+    {
+        $('.categoryButton').removeClass('active');
+        var dataid = $(this).data('id');
+        $('.categoryMenu li .app-btn').each(function()
+        {
+            if($(this).data('id') == dataid)
+            {
+                var id = $(this).parents('.categoryMenu').data('id');
+                $('#category' + id).addClass('active');
+                return;
+            }
+        });
+    });
+
+    $(document).mouseover(function(e)
+    {
+        $('.categoryMenu').each(function()
+        {
+            if($(this).is(':visible'))
+            {
+                var dataid  = $(this).data('id');
+                var button  = $('#category' + dataid);
+                var top     = button.offset().top;
+                var left    = button.offset().left;
+                var right   = left + button.width() + $(this).width();
+                var bottom  = top + button.height() + $(this).height();
+                if(e.pageX < left || e.pageX > right || e.pageY < top || e.pageY > bottom)
+                {
+                    $(this).hide();
+                }
+            }
+        });
+    });
+});
+
+/**
+ * Update orders of entries
+ * 
+ * @param  object      orders
+ * @param  function    callback after success
+ * @access public
+ * @return void
+ */
+function sortEntries(orders, callback)
+{
+    $.post(createLink('entry', 'customSort'), orders, function(data)
+    {
+        callback && callback(data.result == 'success');
+    }, 'json');
+}
+
+/**
+ * Update menu attribute of entry
+ * 
+ * @param  int         entry id 
+ * @param  function    callback after success
+ * @access public
+ * @return void
+ */
+function updateEntryMenu(et, callback)
+{
+    $.post(createLink('entry', 'updateEntryMenu'), et, function(data)
+    {
+        callback && callback(data.result == 'success');
+    }, 'json');
+}
+
+/**
+ * Delete entry.
+ * 
+ * @param  object      entry 
+ * @param  function    callback after delete success
+ * @access public7
+ * @return void
+ */
+function deleteEntry(et, callback)
+{
+    $.getJSON(createLink('entry', 'delete', 'code=' + et.code), function(data)
+    {
+        callback && callback(data.result == 'success');
+    });
+}
+
+/**
+ * Delete block.
+ * 
+ * @param  int    $index 
+ * @access public
+ * @return void
+ */
+function deleteBlock(index)
+{
+    $.getJSON(createLink('block', 'delete', 'index=' + index), function(data)
+    {
+        if(data.result != 'success')
+        {
+            alert(data.message);
+            return false;
+        }
+    })
+}
+
+/**
+ * Hidden block;
+ * 
+ * @param  index $index 
+ * @access public
+ * @return void
+ */
+function hiddenBlock(index)
+{
+    $.getJSON(createLink('block', 'delete', 'index=' + index + '&app=sys&type=hidden'), function(data)
+    {
+        if(data.result != 'success')
+        {
+            alert(data.message);
+            return false;
+        }
+        reloadHome();
+        $.zui.messager.info(ipsLang["hiddenBlock"]);
+    })
+}
+
+/**
+ * Sort blocks.
+ * 
+ * @param  object $orders  format is {'block2' : 1, 'block1' : 2, oldOrder : newOrder} 
+ * @access public
+ * @return void
+ */
+function sortBlocks(orders)
+{
+    var oldOrder = new Array();
+    var newOrder = new Array();
+    for(i in orders)
+    {
+       oldOrder.push(i.replace('block', ''));
+       newOrder.push(orders[i]);
+    }
+
+    $.getJSON(createLink('block', 'sort', 'oldOrder=' + oldOrder.join(',') + '&newOrder=' + newOrder.join(',')), function(data)
+    {
+        if(data.result != 'success') return false;
+
+        $('#home .panels-container .panel:not(.panel-dragging-holder)').each(function()
+        {
+            var $this = $(this);
+            var index = $this.data('order');
+            var url = createLink('entry', 'printBlock', 'index=' + index);
+            /* Update new index for block id edit and delete. */
+            $this.attr('id', 'block' + index).data('id', index).attr('data-url', url).data('url', url);
+            $this.find('.panel-actions .edit-block').attr('href', createLink('block', 'admin', 'index=' + index));
+        });
+    });
+}
+
+/**
+ * Resize block
+ * @param  object $event
+ * @access public
+ * @return void
+ */
+function resizeBlock(event)
+{
+  var blockID = event.element.find('.panel').data('blockid');
+  var data = event.type == 'vertical' ? event.height : event.grid;
+  $.getJSON(createLink('block', 'resize', 'id=' + blockID + '&type=' + event.type + '&data=' + data), function(data)
+  {
+      if(data.result !== 'success') event.revert();
+  });
+}
+
+/**
+ * init sign in and sign out button.
+ * 
+ * @access public
+ * @return void
+ */
+function initAttendButton()
+{
+    $('.signin').click(function()
+    {
+        $.getJSON(createLink('oa.attend', 'signin'), function(data)
+        {
+            if(data.result == 'success') $.zui.messager.success(data.message);
+            if(data.result == 'fail') $.zui.messager.info(data.message);
+        });
+    });
+    $('.signout').click(function()
+    {
+        $.getJSON(createLink('oa.attend', 'signout'), function(data)
+        {
+            if(data.result == 'success') window.location.href = createLink('user', 'logout');
+            if(data.result == 'fail') $.zui.messager.info(data.message);
+        });
+    });
+}
+
+</script>
+
+
+
+</body></html>

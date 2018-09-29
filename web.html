@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="screen-desktop-wide device-desktop">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>测试页面</title>
+<link rel="stylesheet" href="lib/zui/css/zui.min.css" />
+<link rel="stylesheet" href="lib/zui/css/zui-theme.min.css" />
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="lib/jquery/jquery.validate.min.js"></script>
+<script src="lib/jquery/jquery.validate.unobtrusive.min.js"></script>
+<script src="lib/zui/js/zui.min.js"></script>
+<link rel="stylesheet" href="lib/zui/lib/tabs/zui.tabs.min.css" />
+<script src="lib/zui/lib/tabs/zui.tabs.min.js"></script>
+<link rel="stylesheet" href="css/index.css" type="text/css" >
+
+<style>
+.categoryButton, .categoryMenu li button {
+	height: 40px;
+	width: 40px;
+	padding: 6px;
+	text-align: center;
+}
+
+.categoryButton .icon, .categoryMenu li .app-btn .icon {
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 28px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+	display: inline-block;
+	font-size: 12px;
+	font-weight: normal;
+	min-width: 28px;
+}
+
+.categoryMenu {
+	opacity: 1;
+	left: 39px;
+	padding: 0px 5px 0px 5px;
+}
+
+.categoryMenu li {
+	float: left;
+}
+
+.categoryButton.active, .categoryMenu li button.active {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 0.85);
+}
+</style>
+</head>
+<body>
+	<!-- Desktop -->
+	<div id="desktop">
+		<!-- BEGIN：左侧栏 -->
+		<div id="leftBar" class="dock-left unselectable">			
+			<!--BEGIN:APP DASH-->
+			<div id="apps-menu">
+				<ul class="bar-menu">
+					<li id="s-menu-dashboard" data-order="0"><button
+							data-toggle="tooltip" data-tip-class="s-menu-tooltip"
+							data-placement="right" data-btn-type="menu"
+							class="app-btn s-menu-btn open active" title="我的地盘"
+							data-id="dashboard">
+							<i class="icon icon-home"></i>
+						</button></li>
+					<li id="s-menu-1" data-order="1"><button data-toggle="tooltip"
+							data-tip-class="s-menu-tooltip" data-placement="right"
+							data-btn-type="menu" class="app-btn s-menu-btn" title=""
+							data-id="1" data-original-title="客户管理">
+							<img src="img/app-crm.png" alt="">
+						</button></li>
+					<li id="s-menu-superadmin" data-order="7"><button
+							data-toggle="tooltip" data-tip-class="s-menu-tooltip"
+							data-placement="right" data-btn-type="menu"
+							class="app-btn s-menu-btn" title="后台管理" data-id="superadmin">
+							<i class="icon icon-cog"></i>
+						</button></li>
+					<li id="s-menu-allapps" data-order="8"><button
+							data-toggle="tooltip" data-tip-class="s-menu-tooltip"
+							data-placement="right" data-btn-type="menu"
+							class="app-btn s-menu-btn" title="所有应用" data-id="allapps">
+							<i class="icon icon-th-large"></i>
+						</button></li>
+				</ul>			
+			</div>
+			<!--END:APP DASH-->
+		</div>
+		<!-- END：左侧栏 -->	
+	</div>
+<div id="bottomBar" class="dock-bottom unselectable">
+			<!-- BEGIN：任务栏 -->
+				<ul class="bar-menu">
+					<li id="s-task-dashboard"><button
+							class="app-btn s-task-btn open active" title="我的地盘"
+							data-btn-type="task" data-id="dashboard">
+							<i class="icon icon-home"></i>我的地盘
+						</button></li>
+					<li id="s-task-dashboard"><button class="app-btn s-task-btn"
+							title="谁的地盘" data-btn-type="task" data-id="dashboard">
+							<i class="icon icon-home"></i>谁的地盘
+						</button></li>
+				</ul>
+			</div>
+			<!-- BEGIN：系统托盘 -->
+			<div id="bottomRightBar" class="dock-right">
+				<ul class="bar-menu">
+					<li><a href="javascript:void(0)" class="sign signout">签退</a></li>
+					<li><button id="showDesk" type="button"
+							class="fullscreen-btn icon-desktop" data-id="home"
+							data-toggle="tooltip" title="桌面"></button></li>
+				</ul>
+				<div class="copyright">
+					<a href="http://www.ranzhi.org/?v=4.8" target="_blank">然之协同 4.8</a>
+				</div>
+			</div>
+			<!-- END:系统托盘 -->
+	<div id="deskContainer">
+		<div id="win-dashboard"
+			class="window window-iframe window-fixed window-control-simple window-max window-active"
+			style="width: 1880px; height: 930px; left: 40px; top: 0px; z-index: 100;"	>
+			<div class="window-head">
+				<i class="icon icon-home"></i><strong title="我的地盘">我的地盘</strong>
+				<ul>
+					<li><button class="reload-win">
+							<i class="icon-repeat"></i>
+						</button></li>
+					<li><button class="min-win">
+							<i class="icon-minus"></i>
+						</button></li>
+					<li><button class="max-win">
+							<i class="icon-resize-full"></i>
+						</button></li>
+					<li><button class="close-win">
+							<i class="icon-remove"></i>
+						</button></li>
+						<li><button class="close-win">
+							全屏
+						</button></li>
+						<li><button class="close-win">
+							USER
+						</button></li>
+				</ul>
+			</div>
+			<div class="window-cover"></div>
+			<div class="window-content" style="height: 930px;">				
+					<iframe id="iframe-dashboard" name="iframe-dashboard"
+					src="module.html" allowtransparency="true" scrolling="auto"
+					hidefocus="" style="width: 100%; height: 100%; left: 0px;"
+					frameborder="no"></iframe>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

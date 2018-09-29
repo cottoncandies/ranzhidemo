@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="screen-desktop-wide device-desktop">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<title>指派给我 - 然之协同</title>
+<link rel="stylesheet" href="lib/zui/css/zui.min.css" />
+<link rel="stylesheet" href="lib/zui/css/zui-theme.min.css" />
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="lib/jquery/jquery.validate.min.js"></script>
+<script src="lib/jquery/jquery.validate.unobtrusive.min.js"></script>
+<script src="lib/zui/js/zui.min.js"></script>
+<script language="Javascript">
+	var config = {
+		"webRoot" : "\/",
+		"appName" : "sys",
+		"cookieLife" : 30,
+		"requestType" : "GET",
+		"requestFix" : "-",
+		"moduleVar" : "m",
+		"methodVar" : "f",
+		"viewVar" : "t",
+		"defaultView" : "html",
+		"themeRoot" : "\/theme\/",
+		"currentModule" : "my",
+		"currentMethod" : "task",
+		"clientLang" : "zh-cn",
+		"requiredFields" : "",
+		"save" : "\u4fdd\u5b58",
+		"router" : "\/sys\/index.php",
+		"runMode" : "front",
+		"timeout" : 30000,
+		"pingInterval" : 60
+	}
+</script>
+<script language="Javascript">
+	if (typeof (v) != "object")
+		v = {};
+	v.entryID = "superadmin";
+</script>
+<script language="Javascript">
+	v.entryID = "dashboard";
+</script>
+<link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/all.css" type="text/css" media="print">
+<script src="js/all.js" type="text/javascript"></script>
+<style>
+.page-content>.panel>.panel-heading>.panel-actions {
+	margin-left: -5px;
+}
+
+.tr-child, .tr-child>td {
+	padding: 0;
+}
+
+.tr-child>td>table {
+	padding: 5px;
+	background-color: #fff;
+	border: 2px solid #DDDDDD;
+}
+</style>
+<script language="Javascript">
+	v.lang = {
+		"confirmDelete" : "\u60a8\u786e\u5b9a\u8981\u6267\u884c\u5220\u9664\u64cd\u4f5c\u5417\uff1f",
+		"confirmFinish" : "\u60a8\u786e\u5b9a\u8981\u6267\u884c\u5b8c\u6210\u64cd\u4f5c\u5417\uff1f",
+		"deleteing" : "\u5220\u9664\u4e2d",
+		"doing" : "\u5904\u7406\u4e2d",
+		"timeout" : "\u7f51\u7edc\u8d85\u65f6,\u8bf7\u91cd\u8bd5",
+		"confirmDiscardChanges" : "\u8868\u5355\u5df2\u66f4\u6539\uff0c\u786e\u5b9a\u5173\u95ed\uff1f",
+		"yes" : "\u662f",
+		"no" : "\u5426"
+	};
+</script>
+</head>
+<body class="m-my-task">
+	<style>
+body {
+	padding-top: 58px
+}
+</style>
+	<nav class="navbar navbar-main navbar-fixed-top" id="mainNavbar">
+		<div class="collapse navbar-collapse">
+			<!--标题区-->
+			<ul class="nav navbar-nav">
+				<li><a href="index.html" data-toggle="modal" data-id="profile">
+					<i class="icon-user"></i>
+						demo</a></li>
+			</ul>
+			<!--主菜单-->
+			<ul class="nav navbar-nav">
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">待办</a></li>
+				<li class="active"><a class="app-btn open" data-id="dashboard" href="main.html">任务</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">项目</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">订单</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">合同</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">审批</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">组织</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">动态</a></li>
+				<li><a class="app-btn open" data-id="dashboard" href="main.html">联系人</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!--功能区-->
+	<nav id="menu">
+		<ul class="nav">
+			<li class="active"><a href="main.html">指派给我</a></li>
+			<li class=""><a href="main.html">由我创建</a></li>
+			<li class=""><a href="main.html">由我完成</a></li>
+			<li class=""><a href="main.html">由我关闭</a></li>
+			<li class=""><a href="main.html">由我取消</a></li>
+			<li class=""><a href="main.html">未关闭</a></li>
+		</ul>
+	</nav>
+	<div id="querybox" class="hidden"></div>
+
+	<div class="row page-content with-menu">
+		<script language="Javascript">
+			v.type = "assignedTo";
+		</script>
+		<div class="panel">
+			内容区块
+		</div>
+		<script language="Javascript">
+			$(document).ready(
+					function() {
+						$('#menu .nav > li').removeClass('active').find(
+								'a[href*=' + v.type + ']').parent('li')
+								.addClass('active');
+
+						/* process actions. */
+						$('.actions a, .createProjectTH a').click(function() {
+							var skip = false;
+							if ($(this).data('toggle') == 'modal')
+								skip = true;
+							if ($(this).hasClass('deleter'))
+								skip = true;
+							if ($(this).hasClass('reloadDeleter'))
+								skip = true;
+							if ($(this).hasClass('switcher'))
+								skip = true;
+
+							var href = $(this).prop('href');
+							var app = '';
+							if (href.indexOf('/crm/') != -1)
+								app = 'crm';
+							if (href.indexOf('/oa/') != -1)
+								app = 'oa';
+							if (href.indexOf('/cash/') != -1)
+								app = 'cash';
+							if (href.indexOf('/team/') != -1)
+								app = 'team';
+							if (href.indexOf('/proj/') != -1)
+								app = 'proj';
+
+							if (!skip && app != '') {
+								$.openEntry(app, href);
+								return false;
+							}
+						});
+					})
+		</script>
+	</div>
+</body>
+</html>
