@@ -1,0 +1,211 @@
+[
+  {
+    "title": "待办",
+    "nav": [
+      {
+        "title": "日历",
+        "url":"json/todo/calendar.json"
+      },
+      {
+        "title": "所有",
+        "url":"json/todo/all.json"
+      },
+      {
+        "title": "指派他人",
+        "url":"json/todo/assigned_to_others.json"
+      },
+      {
+        "title": "指派给我",
+        "url":"json/todo/assigned_to_me.json"
+      },
+      {
+        "title": "未完成",
+        "url":"json/todo/unfinished.json"
+      },
+      {
+        "title": "待定",
+        "url":"json/todo/undetermined.json"
+      }
+    ]
+  },
+  {
+    "title": "任务",
+    "nav": [
+      {
+        "title": "指派给我",
+        "url": "指派给我.html"
+      },
+      {
+        "title": "由我创建",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我完成",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我关闭",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我取消",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "未关闭",
+        "url": "由我创建.html"
+      }
+    ]
+  },
+  {
+    "title": "项目",
+    "nav": [
+    ]
+  },
+  {
+    "title": "订单",
+    "nav": [
+      {
+        "title": "亟需联系",
+        "url": "指派给我.html"
+      },
+      {
+        "title": "今天联系",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "明天联系",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "指派给我",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我创建",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我签约",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "所有",
+        "url": "由我创建.html"
+      }
+    ]
+  },
+  {
+    "title": "合同",
+    "nav": [
+      {
+        "title": "未完成",
+        "url": "指派给我.html"
+      },
+      {
+        "title": "已完成",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "已取消",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我回款",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "由我交付",
+        "url": "由我创建.html"
+      }
+    ]
+  },
+  {
+    "title": "审批",
+    "nav": [
+      {
+        "title": "所有",
+        "url": "指派给我.html"
+      },
+      {
+        "title": "考勤",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "请假",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "加班",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "报销",
+        "url": "由我创建.html"
+      }
+    ]
+  },
+  {
+    "title": "组织",
+    "nav": [
+      {
+        "title": "待办",
+        "url": "指派给我.html"
+      },
+      {
+        "title": "日志",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "周报",
+        "url": "由我创建.html"
+      }
+    ]
+  },
+  {
+    "title": "动态",
+    "nav": [
+      {
+        "title": "今天",
+        "url": "指派给我.html"
+      },
+      {
+        "title": "昨天",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "前天",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "本周",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "上周",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "本月",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "上月",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "所有",
+        "url": "由我创建.html"
+      },
+      {
+        "title": "搜索",
+        "url": "由我创建.html"
+      }
+    ]
+  },
+  {
+    "title": "联系人",
+    "nav": [
+    ]
+  }
+]

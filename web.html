@@ -56,7 +56,7 @@
 	<!-- Desktop -->
 	<div id="desktop">
 		<!-- BEGIN：左侧栏 -->
-		<div id="leftBar" class="dock-left unselectable">			
+		<div id="leftBar" class="dock-left unselectable">
 			<!--BEGIN:APP DASH-->
 			<div id="apps-menu">
 				<ul class="bar-menu">
@@ -85,11 +85,11 @@
 							class="app-btn s-menu-btn" title="所有应用" data-id="allapps">
 							<i class="icon icon-th-large"></i>
 						</button></li>
-				</ul>			
+				</ul>
 			</div>
 			<!--END:APP DASH-->
 		</div>
-		<!-- END：左侧栏 -->	
+		<!-- END：左侧栏 -->
 	</div>
 <div id="bottomBar" class="dock-bottom unselectable">
 			<!-- BEGIN：任务栏 -->
@@ -146,7 +146,7 @@
 				</ul>
 			</div>
 			<div class="window-cover"></div>
-			<div class="window-content" style="height: 930px;">				
+			<div class="window-content" style="height: 520px;">
 					<iframe id="iframe-dashboard" name="iframe-dashboard"
 					src="module.html" allowtransparency="true" scrolling="auto"
 					hidefocus="" style="width: 100%; height: 100%; left: 0px;"
@@ -154,5 +154,14 @@
 			</div>
 		</div>
 	</div>
+
+<script>
+    $(function () {
+       $("#apps-menu .bar-menu li").click(function () {
+           console.log("aaa");
+       })
+
+    })
+</script>
 </body>
 </html>
