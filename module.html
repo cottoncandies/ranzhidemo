@@ -83,37 +83,9 @@
     }
 </style>
 <nav class="navbar navbar-main navbar-fixed-top" id="mainNavbar">
-    <!--<div class="collapse navbar-collapse">-->
-    <!--&lt;!&ndash;标题区&ndash;&gt;-->
-    <!--<ul class="nav navbar-nav">-->
-    <!--<li><a href="index.html" data-toggle="modal" data-id="profile">-->
-    <!--<i class="icon-user"></i>-->
-    <!--demo</a></li>-->
-    <!--</ul>-->
-    <!--&lt;!&ndash;主菜单&ndash;&gt;-->
-    <!--<ul class="nav navbar-nav">-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">待办</a></li>-->
-    <!--<li class="active"><a class="app-btn open" data-id="dashboard" href="main.html">任务</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">项目</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">订单</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">合同</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">审批</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">组织</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">动态</a></li>-->
-    <!--<li><a class="app-btn open" data-id="dashboard" href="main.html">联系人</a></li>-->
-    <!--</ul>-->
-    <!--</div>-->
 </nav>
 <!--功能区-->
 <nav id="menu">
-    <!--<ul class="nav">-->
-    <!--<li class="active"><a href="main.html">指派给我</a></li>-->
-    <!--<li class=""><a href="main.html">由我创建</a></li>-->
-    <!--<li class=""><a href="main.html">由我完成</a></li>-->
-    <!--<li class=""><a href="main.html">由我关闭</a></li>-->
-    <!--<li class=""><a href="main.html">由我取消</a></li>-->
-    <!--<li class=""><a href="main.html">未关闭</a></li>-->
-    <!--</ul>-->
 </nav>
 <div id="querybox" class="hidden"></div>
 
@@ -167,27 +139,6 @@
 
 <script>
     $(function () {
-        // $('#remoteDataGridExample').datagrid({
-        //     dataSource: {
-        //         cols:[
-        //             {name: 'time', label: '时间', width: 132},
-        //             {name: 'hera', label: '英雄', width: 134},
-        //             {name: 'action', label: '动作', width: 109},
-        //             {name: 'target', label: '目标', width: 109},
-        //             {name: 'desc', label: '描述', width: 287}
-        //         ],
-        //         array:[
-        //             {time: '00:11:12', hero:'幻影刺客', action: '击杀', target: '斧王', desc: '幻影刺客击杀了斧王。'},
-        //             {time: '00:13:22', hero:'幻影刺客', action: '购买了', target: '隐刀', desc: '幻影刺客购买了隐刀。'},
-        //             {time: '00:19:36', hero:'斧王', action: '购买了', target: '黑皇杖', desc: '斧王购买了黑皇杖。'},
-        //             {time: '00:21:43', hero:'力丸', action: '购买了', target: '隐刀', desc: '力丸购买了隐刀。'}
-        //         ]
-        //     },
-        // });
-
-
-
-
         // 页面渲染navbar
         $.ajax({
             type: "GET",
@@ -205,22 +156,6 @@
                 $('#mainNavbar').html(html);
             }
         });
-
-        // $.ajax({
-        //     type: "GET",
-        //     url: "json/todo/all.json",
-        //     dataType: "json",
-        //     success: function (data) {
-        //         $('#menu').empty();
-        //         var html = "<ul class='nav'>";
-        //         $.each(data, function (commentIndex, nav) {
-        //             html += "<li><a href='javascript:;' onclick='navcontent(" + JSON.stringify(nav) + ")'>" + nav.title + "</a></li>";
-        //         });
-        //         html += "</ul>";
-        //         $('#menu').html(html);
-        //
-        //     }
-        // });
     });
 
     // navbar点击事件
@@ -237,9 +172,7 @@
 
     // nav点击事件
     function navcontent(obj) {
-
         $('#remoteDataGridExample').empty();
-
         $('#remoteDataGridExample').datagrid({
             dataSource: {
                 cols: [
@@ -321,196 +254,6 @@
 
     var ipsLang = {};
     ipsLang["confirmClose"] = "确认要关闭　【{0}】 吗？";ipsLang["entryNotFindTip"] = "应用没有找到！";ipsLang["busyTip"] = "应用正忙，请稍候...";ipsLang["reloadText"] = "刷新";ipsLang["closeText"] = "关闭";ipsLang["openText"] = "打开";ipsLang["removeText"] = "移除";ipsLang["fixToMenuText"] = "左侧显示";ipsLang["removeFromMenuText"] = "左侧移除";ipsLang["deleteEntryText"] = "删除应用";ipsLang["removedEntry"] = "应用【{0}】已删除";ipsLang["confirmRemoveEntry"] = "确定移除应用【{0}】吗？";ipsLang["showWindowText"] = "显示";ipsLang["confirmRemoveBlock"] = "确定要删除区块 【{0}】 吗？";ipsLang["removedBlock"] = "区块已删除";ipsLang["hiddenBlock"] = "区块已隐藏";ipsLang["orderdBlocksSaved"] = "排序已保存";ipsLang["moreOptionTip"] = "显示另外 {0} 个应用";ipsLang["confirmCloseBrowser"] = "提示：当前有打开的应用窗口";
-    entries.push(
-        {
-            id:       '1',
-            code:     'crm',
-            name:     '客户管理',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=1',
-            open:     'iframe',
-            desc:     '客户管理',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-crm.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '客户',
-            order:    '10',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '2',
-            code:     'oa',
-            name:     '日常办公',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=2',
-            open:     'iframe',
-            desc:     '日常办公',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-oa.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '办公',
-            order:    '20',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '8',
-            code:     'proj',
-            name:     '项目',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=8',
-            open:     'iframe',
-            desc:     '项目',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-proj.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '项目',
-            order:    '30',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '9',
-            code:     'doc',
-            name:     '文档',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=9',
-            open:     'iframe',
-            desc:     '文档',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-doc.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '文档',
-            order:    '40',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '3',
-            code:     'cash',
-            name:     '现金记账',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=3',
-            open:     'iframe',
-            desc:     '现金记账',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-cash.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '记账',
-            order:    '50',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '4',
-            code:     'team',
-            name:     '团队',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=4',
-            open:     'iframe',
-            desc:     '团队',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-team.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '团队',
-            order:    '60',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '5',
-            code:     'hr',
-            name:     '人力资源',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=5',
-            open:     'iframe',
-            desc:     '人力资源',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-hr.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '人资',
-            order:    '70',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '7',
-            code:     'psi',
-            name:     '进销存',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=7',
-            open:     'iframe',
-            desc:     '进销存',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-psi.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '进销存',
-            order:    '80',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '6',
-            code:     'flow',
-            name:     '工作流',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=6',
-            open:     'iframe',
-            desc:     '工作流',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-flow.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '工作流',
-            order:    '90',
-            sys:      '1',
-            category: '0'
-        });
-    entries.push(
-        {
-            id:       '10',
-            code:     'ameba',
-            name:     '阿米巴',
-            url:      '/sys/index.php?m=entry&f=visit&entryID=10',
-            open:     'iframe',
-            desc:     '阿米巴',
-            size:      'max',
-            icon:     '/theme/default/images/ips/app-ameba.png',
-            control:  'simple',
-            position: 'default',
-            menu:     'all',
-            display:  'fixed',
-            abbr:     '阿米巴',
-            order:    '100',
-            sys:      '1',
-            category: '0'
-        });
 </script>
 
 <script language="Javascript">$(function()
@@ -809,8 +552,8 @@ function fixSearchPanel()
 
 </script>
 
-<script language="Javascript">startCron()
-</script>
+<!--<script language="Javascript">startCron()-->
+<!--</script>-->
 
 <script>
     $('#bottomRightBar .bar-menu').prepend('<li>' + $('#searchDIV').html() + '</li>');
